@@ -1,0 +1,81 @@
+{
+  "name": "txt-color",
+  "displayName": "TXT Color",
+  "description": "Simple syntax highlighting for plain text, logs, configuration, environment and properties files.",
+  "version": "0.1.0",
+  "publisher": "VoceCertificado",
+  "icon": "images/icon.png",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vocecertificado/txt-color"
+  },
+  "homepage": "https://github.com/vocecertificado/txt-color#readme",
+  "bugs": {
+    "url": "https://github.com/vocecertificado/txt-color/issues"
+  },
+  "galleryBanner": {
+    "color": "#F08C35",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "txt",
+    "text",
+    "plain text",
+    "log",
+    "logs",
+    "ini",
+    "conf",
+    "cfg",
+    "env",
+    "dotenv",
+    "properties",
+    "configuration",
+    "config",
+    "key-value",
+    "syntax",
+    "highlight",
+    "highlighting"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "txt",
+        "aliases": [
+          "TXT",
+          "TXT Color",
+          "TXT Syntex",
+          "TXT highlight",
+          "Text",
+          "Text Color",
+          "Text Syntex",
+          "Text highlight"
+        ],
+        "extensions": [
+          ".txt",
+          ".log",
+          ".ini",
+          ".conf",
+          ".cfg",
+          ".env",
+          ".properties"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "txt",
+        "scopeName": "source.txt",
+        "path": "./syntaxes/txt.tmLanguage.json"
+      }
+    ]
+  }
+}

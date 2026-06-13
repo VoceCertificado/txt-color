@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# VS Code / Kiro package output
+*.vsix
+
+# Node dependencies, se usar npm futuramente
+node_modules/
+
+# Logs
+*.log
+
+# Arquivos temporários
+tmp/
+temp/

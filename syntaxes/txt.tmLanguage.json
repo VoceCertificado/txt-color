@@ -1,0 +1,72 @@
+{
+  "scopeName": "source.txt",
+  "name": "TXT Color",
+  "patterns": [
+    {
+      "name": "comment.line.txt",
+      "match": "(#|;).*"
+    },
+    {
+      "name": "markup.heading.txt",
+      "match": "^\\s*(#{2,6})\\s+.*$"
+    },
+    {
+      "name": "markup.heading.txt",
+      "match": "^\\s*[A-ZÁÉÍÓÚÂÊÔÃÕÇ0-9][A-ZÁÉÍÓÚÂÊÔÃÕÇ0-9\\s.,:;!?/()_-]{3,}$"
+    },
+    {
+      "name": "keyword.other.list.double-dash.txt",
+      "match": "^\\s*--\\s+.*$"
+    },
+    {
+      "name": "keyword.other.list.dash.txt",
+      "match": "^\\s*-\\s+.*$"
+    },
+    {
+      "name": "keyword.control.folding.start.txt",
+      "match": "^\\s*(Section|SECTION|Region|REGION|Step|STEP)\\b.*$"
+    },
+    {
+      "name": "keyword.control.folding.end.txt",
+      "match": "^\\s*---\\s*$"
+    },
+    {
+      "name": "entity.name.section.txt",
+      "match": "^\\s*\\[[^\\]]+\\]"
+    },
+    {
+      "name": "variable.other.key.txt",
+      "match": "^\\s*[A-Za-z0-9_.-]+(?=\\s*[=:])"
+    },
+    {
+      "name": "keyword.operator.assignment.txt",
+      "match": "[=:]"
+    },
+    {
+      "name": "keyword.other.important.txt",
+      "match": "\\b(TODO|FIXME|NOTE|INFO|DEBUG|WARN|WARNING|ERROR|FAILED|SUCCESS|PASS|PASSED)\\b"
+    },
+    {
+      "name": "constant.numeric.txt",
+      "match": "\\b\\d+(\\.\\d+)?\\b"
+    },
+    {
+      "name": "markup.underline.link.txt",
+      "match": "\\bhttps?://[^\\s]+"
+    },
+    {
+      "name": "string.other.email.txt",
+      "match": "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}\\b"
+    },
+    {
+      "name": "string.quoted.double.txt",
+      "begin": "\"",
+      "end": "\""
+    },
+    {
+      "name": "string.quoted.single.txt",
+      "begin": "'",
+      "end": "'"
+    }
+  ]
+}

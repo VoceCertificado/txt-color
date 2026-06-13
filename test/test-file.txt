@@ -1,0 +1,76 @@
+# Main title in Markdown
+## Markdown subtitle
+### Smaller Markdown section
+
+ALL CAPS EXAMPLE
+small caps text example
+
+[database]
+host=localhost
+port=3306
+user: admin
+password="123456"
+enabled=true
+
+[aws]
+region=sa-east-1
+service: Amazon EC2
+account: lab
+
+# Comment starting with hash
+; Comment starting with semicolon
+
+- Simple list item
+- Validate domain configuration
+- Review environment file
+
+-- Important note
+-- Subitem or additional note
+-- Check if the certificate was validated
+
+site=https://www.contoso.com
+email=john.doe@contoso.com
+
+TODO review this configuration
+FIXME fix the variable value
+NOTE this is an important note
+INFO process started
+DEBUG variable loaded successfully
+WARN check this configuration
+WARNING exposed port
+ERROR connection refused
+FAILED deployment not completed
+SUCCESS deployment completed
+PASS test executed
+PASSED final validation completed
+
+integer_number=123
+decimal_number=45.67
+port: 8080
+timeout: 30
+
+double_quotes="value inside double quotes"
+single_quotes='value inside single quotes'
+backticks=`value inside backticks`
+
+Section General Configuration
+This line should be inside the foldable section.
+Another content line inside Section.
+---
+
+Region Database
+Database configuration for local testing.
+host=db.local
+port=5432
+---
+
+[folding-section]
+This section should also support folding.
+line=value
+---
+
+<example>
+«text inside guillemets»
+{ block }
+( parentheses )
+[ brackets ]
