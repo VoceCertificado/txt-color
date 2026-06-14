@@ -25,6 +25,16 @@ A beautiful color highlighting extension for plain text and configuration-style 
 
 A sample file is available in the `test/` folder.
 
-## Screenshot
+## Screenshots
 
-![TXT Color syntax highlighting example](https://raw.githubusercontent.com/vocecertificado/txt-color/main/images/screenshot.png)
+### Light+ theme
+
+TXT Color applied to a `.txt` file using the Light+ IDE theme.
+
+![TXT Color applied to a TXT file using the Light+ IDE theme](https://raw.githubusercontent.com/vocecertificado/txt-color/main/images/txt-color-light-theme.png)
+
+### Dark+ theme
+
+TXT Color applied to a `.txt` file using the Dark+ IDE theme.
+
+![TXT Color applied to a TXT file using the Dark+ IDE theme](https://raw.githubusercontent.com/vocecertificado/txt-color/main/images/txt-color-dark-theme.png)
