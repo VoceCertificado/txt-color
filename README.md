@@ -1,3 +1,10 @@
+<img
+    src="https://raw.githubusercontent.com/vocecertificado/txt-color/main/images/icon.png"
+    alt="TXT Color"
+    width="120"
+    height="120"
+  />
+
 # TXT Color
 
 A beautiful color highlighting extension for plain text and configuration-style files.
