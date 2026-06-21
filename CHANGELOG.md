@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.3 - 2026-06-20
+- Reorganized grammar patterns for better maintainability.
+- Simplified case-insensitive patterns for folding markers using `(?i)` flag instead of listing all case variations.
+- Updated comment descriptions for clarity and consistency.
+- Reordered patterns: list items moved after section headers, improved pattern grouping.
+
 ## 0.2.2 - 2026-06-18
 - Renamed the repository from txt-color to txtcolor after moving the project to the VoceCertificado organization.
 - Updated repository links in the documentation and package metadata.

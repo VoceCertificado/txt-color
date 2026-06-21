@@ -3,7 +3,7 @@
   "name": "TXT Color",
   "patterns": [
     {
-      "comment": "Comments starting with # or ; — anchored to start of line to avoid matching URL fragments",
+      "comment": "Line comments starting with # or ;",
       "name": "comment.line.txt",
       "match": "^\\s*(#|;).*"
     },
@@ -13,19 +13,29 @@
       "match": "^\\s*(#{2,6})\\s+.*$"
     },
     {
-      "comment": "ALL CAPS headings — excluded when line contains = or : to avoid clashing with key=VALUE patterns",
+      "comment": "ALL CAPS headings, excluded when line contains = or : to avoid clashing with key=VALUE patterns",
       "name": "markup.heading.txt",
       "match": "^\\s*[A-ZÁÉÍÓÚÂÊÔÃÕÇ0-9][A-ZÁÉÍÓÚÂÊÔÃÕÇ0-9\\s.,:;!?/()_-]{3,}$(?<![=:])"
     },
     {
-      "comment": "Log lines with severity prefix — highlights the whole line for ERROR/WARN/INFO/DEBUG",
+      "comment": "Uppercase error lines",
       "name": "invalid.illegal.error.txt",
       "match": "^.*\\b(ERROR|FAILED)\\b.*$"
     },
     {
-      "comment": "Warning lines",
+      "comment": "Uppercase warning lines",
       "name": "invalid.deprecated.warning.txt",
-      "match": "^.*\\b(WARN|WARNING)\\b.*$"
+      "match": "^.*\\b(WARNING|WARN)\\b.*$"
+    },
+    {
+      "comment": "Lowercase inline error keywords",
+      "name": "invalid.illegal.error.txt",
+      "match": "\\b(error|failed)\\b"
+    },
+    {
+      "comment": "Lowercase inline warning keywords",
+      "name": "invalid.deprecated.warning.txt",
+      "match": "\\b(warning|warn)\\b"
     },
     {
       "comment": "Success lines",
@@ -33,19 +43,9 @@
       "match": "^.*\\b(SUCCESS|PASS|PASSED)\\b.*$"
     },
     {
-      "comment": "Double-dash list items",
-      "name": "keyword.other.list.double-dash.txt",
-      "match": "^\\s*--\\s+.*$"
-    },
-    {
-      "comment": "Single-dash list items",
-      "name": "keyword.other.list.dash.txt",
-      "match": "^\\s*-\\s+.*$"
-    },
-    {
       "comment": "Folding start markers",
       "name": "keyword.control.folding.start.txt",
-      "match": "^\\s*(Section|SECTION|Region|REGION|Step|STEP)\\b.*$"
+      "match": "(?i)^\\s*(section|region|step)\\b.*$"
     },
     {
       "comment": "Folding end marker",
@@ -58,6 +58,16 @@
       "match": "^\\s*\\[[^\\]]+\\]"
     },
     {
+      "comment": "Double-dash list items",
+      "name": "keyword.other.list.double-dash.txt",
+      "match": "^\\s*--\\s+.*$"
+    },
+    {
+      "comment": "Single-dash list items",
+      "name": "keyword.other.list.dash.txt",
+      "match": "^\\s*-\\s+.*$"
+    },
+    {
       "comment": "Key in key=value or key: value pairs",
       "name": "variable.other.key.txt",
       "match": "^\\s*[A-Za-z0-9_.-]+(?=\\s*[=:])"
@@ -68,14 +78,14 @@
       "match": "[=:]"
     },
     {
-      "comment": "Boolean constants",
-      "name": "constant.language.boolean.txt",
-      "match": "\\b(true|false|yes|no|on|off|True|False|Yes|No|On|Off|TRUE|FALSE|YES|NO|ON|OFF)\\b"
+      "comment": "URLs",
+      "name": "markup.underline.link.txt",
+      "match": "\\bhttps?://[^\\s]+"
     },
     {
-      "comment": "Inline important keywords (not already handled by full-line patterns above)",
-      "name": "keyword.other.important.txt",
-      "match": "\\b(TODO|FIXME|NOTE|INFO|DEBUG)\\b"
+      "comment": "Email addresses",
+      "name": "string.other.email.txt",
+      "match": "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}\\b"
     },
     {
       "comment": "ISO dates (2024-01-15) and times (10:32:45)",
@@ -88,14 +98,14 @@
       "match": "\\b\\d+(\\.\\d+)?\\b"
     },
     {
-      "comment": "URLs",
-      "name": "markup.underline.link.txt",
-      "match": "\\bhttps?://[^\\s]+"
+      "comment": "Boolean constants",
+      "name": "constant.language.boolean.txt",
+      "match": "(?i)\\b(true|false|yes|no|on|off)\\b"
     },
     {
-      "comment": "Email addresses",
-      "name": "string.other.email.txt",
-      "match": "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}\\b"
+      "comment": "Important inline keywords",
+      "name": "keyword.other.important.txt",
+      "match": "\\b(TODO|FIXME|NOTE|INFO|DEBUG)\\b"
     },
     {
       "comment": "Double-quoted strings",
