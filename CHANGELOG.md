@@ -1,4 +1,9 @@
 # Changelog
+## 0.2.5 - 2026-06-22
+- Removed multilingual links from README.md to avoid broken links in extension marketplaces.
+- Removed docs/readme/README.es.md
+- Removed docs/readme/README.pt-BR.md
+
 ## 0.2.4 - 2026-06-22
 - Updated .gitignore to not upload kiro internal files.
 - Updated README.md for multilingual purposes.
